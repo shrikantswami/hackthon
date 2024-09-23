@@ -1,0 +1,23 @@
+<!-- pages/templates/pages/home.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="row">
+
+{% for links in home_page_links %}
+   <!-- Do something -->
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ links.link_name }} </h5>
+                <a href="{% url 'upload_file' %}"
+                   class="{{ links.button_style }}">
+                    {{ links.link_name }}
+                </a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock page_content %}

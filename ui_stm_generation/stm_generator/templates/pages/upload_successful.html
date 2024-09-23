@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h5> Upload Successful {{ file_name }} </h5>
+
+ <a href="{% url 'home' %}"
+                   class="{{ links.button_style }}"> Go Home</a>
+{% endblock %}
